@@ -10,8 +10,8 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /docker-go-server-ping
+RUN go build -o ./docker-go-server-ping main.go
 
 EXPOSE 8080
 
-CMD [ "/docker-go-server-ping" ]
+CMD [ "./docker-go-server-ping" ]
